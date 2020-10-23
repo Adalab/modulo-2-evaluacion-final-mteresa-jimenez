@@ -5,7 +5,7 @@ let series = [];
 function getData(ev) {
   ev.preventDefault();
   const inputElement = document.querySelector(".js-input-search");
-  fetch(`http://api.tvmaze.com/search/shows?q=${inputElement.value}`)
+  fetch(`//api.tvmaze.com/search/shows?q=${inputElement.value}`)
     .then(function (response) {
       console.log(response);
       return response.json();
