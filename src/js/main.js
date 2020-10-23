@@ -27,7 +27,12 @@ function paintSearchEngine() {
     console.log(serie.show.name);
     html += "<li>";
     html += "<div>";
-    html += `<img src=url(${serie.show.image.medium})/>`;
+    // if ((serie.show.image.medium = null)) {
+    //   html += `<img src="https://via.placeholder.com/210x295/ffffff/666666/?
+    //   text=TV"/>`;
+    // } else {
+    html += `<img src="${serie.show.image.medium}"/>`;
+    // }
     html += `<h2>${serie.show.name}</h2>`;
     html += "</div>";
     html += "</li>";
