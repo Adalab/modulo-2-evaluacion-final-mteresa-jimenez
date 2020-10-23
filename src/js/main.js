@@ -26,7 +26,7 @@ function paintSearchEngine() {
   for (const serie of series) {
     console.log(serie.show.name);
     html += "<li>";
-    html += "<div>";
+    html += '<div class="series-box">';
     if (serie.show.image === null) {
       html += `<img src="https://via.placeholder.com/210x295/ffffff/666666/?
       text=TV"/>`;
