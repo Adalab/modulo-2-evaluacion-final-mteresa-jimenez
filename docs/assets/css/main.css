@@ -1,1 +1,1 @@
-*{box-sizing:border-box;margin:0;padding:0}.main__list{padding-left:2rem;padding-bottom:20px}
+*{box-sizing:border-box;margin:0;padding:0;list-style-type:none}.series-box{background-color:lightblue;margin:5px;color:darkblue}.favorite .series-box{background-color:darkblue;margin:5px;color:white}
