@@ -33,6 +33,7 @@ function paintSearchEngine() {
     } else {
       classFavorite = "favorite";
     }
+
     html += `<li class="js-series-item ${classFavorite}" id="${serie.show.id}">`;
     html += '<div class="series-box">';
     if (serie.show.image === null) {
