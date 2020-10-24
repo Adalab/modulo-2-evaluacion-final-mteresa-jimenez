@@ -5,6 +5,7 @@ let favorites = [];
 
 function getData(ev) {
   ev.preventDefault();
+
   const inputElement = document.querySelector(".js-input-search");
   fetch(`//api.tvmaze.com/search/shows?q=${inputElement.value}`)
     .then(function (response) {
@@ -15,6 +16,7 @@ function getData(ev) {
       series = data;
       paintSearchEngine();
       listenFavoriteSeries();
+      setLocalStorageFav();
     });
 }
 
@@ -60,8 +62,10 @@ function markFavoriteSeries(ev) {
   } else {
     favorites.splice(indexOfFavorite, 1);
   }
+
   paintSearchEngine();
   listenFavoriteSeries();
+  setLocalStorageFav();
 }
 
 // listen favorite function
@@ -77,3 +81,20 @@ function listenFavoriteSeries() {
 
 const btnElement = document.querySelector(".js-btn");
 btnElement.addEventListener("click", getData);
+
+// localStorage
+function setLocalStorageFav() {
+  localStorage.setItem("favorites", JSON.stringify(favorites));
+}
+
+function getLocalStorageFav() {
+  const LocalStorageFav = JSON.parse(localStorage.getItem(favorites));
+
+  // if (LocalStorageFav === null) {
+  //   getData();
+  // } else {
+  favorites = LocalStorageFav;
+  paintSearchEngine();
+  listenFavoriteSeries();
+  // }
+}
