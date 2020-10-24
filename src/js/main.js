@@ -24,7 +24,17 @@ function getData(ev) {
 
 function paintSearchEngine() {
   let html = "";
-
+  html += '<section class="section1">';
+  html += "<h2>Mi lista de favoritos</h2>";
+  html += "<ul>";
+  for (const serie of series) {
+    html += "<li>";
+    html += "<li>";
+    html += "</li>";
+  }
+  html += "</ul>";
+  html += "</section>";
+  html += '<section class="section2">';
   html += "<ul>";
   for (const serie of series) {
     let classFavorite;
@@ -34,7 +44,7 @@ function paintSearchEngine() {
     } else {
       classFavorite = "favorite";
     }
-    html += `<li class="js-series-item ${classFavorite}" id="${serie.show.id}">`;
+    html += `<li class="js-series-item series-item ${classFavorite}" id="${serie.show.id}">`;
     html += '<div class="series-box">';
     if (serie.show.image === null) {
       html += `<img src="https://via.placeholder.com/210x295/ffffff/666666/?
@@ -47,6 +57,7 @@ function paintSearchEngine() {
     html += "</li>";
   }
   html += "</ul>";
+  html += "</section>";
   const showsContainer = document.querySelector(".js-container");
   showsContainer.innerHTML = html;
 }
