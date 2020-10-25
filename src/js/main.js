@@ -30,7 +30,7 @@ function paintSearchEngine() {
   for (const favorite of favorites) {
     html += "<li >";
     html += '<div class="favorites-list-container">';
-    // html += `<h2>${series.show.name}</h2>`;
+    // for (const show.name in)
     html += '<button class="remove-favorite js-remove-favorite">x</button>';
     html += "</div>";
     html += "</li>";
@@ -76,11 +76,9 @@ function markFavoriteSeries(ev) {
   } else {
     favorites.splice(indexOfFavorite, 1);
   }
-
   paintSearchEngine();
   listenFavoriteSeries();
   setLocalStorageFav();
-  console.log(favorites);
 }
 
 //handle remove favorite function
@@ -99,12 +97,13 @@ function listenFavoriteSeries() {
 }
 
 // listen remove favorite btn
-// function listenRemoveFavorite() {
-//   const btnRemoveFavs = document.querySelectorAll(".js-remove-favorite");
-//   for (const btnRemoveFav of btnRemoveFavs) {
-//     btnRemoveFav.addEventListener("click", removeFavorite);
-//   }
-// }
+function listenRemoveFavorite() {
+  const btnRemoveFavs = document.querySelectorAll(".js-remove-favorite");
+  for (const btnRemoveFav of btnRemoveFavs) {
+    btnRemoveFav.addEventListener("click", removeFavorite);
+  }
+  console.log("click en eliminar favoritos");
+}
 
 // listen search btn
 
@@ -118,13 +117,8 @@ function setLocalStorageFav() {
 
 function getLocalStorageFav() {
   const LocalStorageFav = JSON.parse(localStorage.getItem(favorites));
-
-  // if (LocalStorageFav === null) {
-  //   getData();
-  // } else {
   favorites = LocalStorageFav;
   paintSearchEngine();
   listenFavoriteSeries();
   listenRemoveFavorite();
-  // }
 }
