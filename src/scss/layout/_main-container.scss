@@ -3,13 +3,38 @@
   display: flex;
   & .section1 {
     background-color: pink;
-    width: 20%;
+    & .favorites-title {
+      width: 300px;
+    }
+    & .favorites-list-container {
+      background-color: white;
+      width: 290px;
+      height: 100px;
+
+      & .remove-favorite {
+        width: 20px;
+        height: 20px;
+        padding-bottom: 1px;
+        border-radius: 50%;
+        border: none;
+        background-color: black;
+        color: white;
+        text-align: center;
+        position: relative;
+        left: 260px;
+        top: 40px;
+      }
+    }
   }
   & .section2 {
     background-color: red;
-    width: 80%;
-    & .series-item {
-      width: 250px;
+    flex-grow: 2;
+    &-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      & .series-item {
+        width: 250px;
+      }
     }
   }
 }
