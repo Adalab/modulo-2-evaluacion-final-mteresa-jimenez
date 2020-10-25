@@ -10,9 +10,10 @@ function paintSearchEngine() {
   for (const favorite of favorites) {
     html += "<li >";
     html += '<div class="favorites-list-container">';
-    html += `<img class="js-img-favorites" src="https://via.placeholder.com/210x295/ffffff/666666/?
+    html += `<img class="js-img-favorites img-favorites" src="https://via.placeholder.com/210x295/ffffff/666666/?
     text=TV"/>`;
-    html += '<h2 class="js-name-favorites"></h2>';
+    html +=
+      '<h2 class="js-name-favorites name-favorites" maxlength="20">Nombre de la serie</h2>';
     html += '<button class="remove-favorite js-remove-favorite">x</button>';
     html += "</div>";
     html += "</li>";
@@ -37,7 +38,7 @@ function paintSearchEngine() {
     } else {
       html += `<img src="${serie.show.image.medium}"/>`;
     }
-    html += `<h2>${serie.show.name}</h2>`;
+    html += `<h2 class="series-name">${serie.show.name}</h2>`;
     html += "</div>";
     html += "</li>";
   }

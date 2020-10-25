@@ -8,7 +8,7 @@
     padding: 10px 5px;
 
     & .favorites-title {
-      width: 320px;
+      width: 330px;
       text-align: center;
       margin: 5px;
       font-family: "Krona One", sans-serif;
@@ -16,9 +16,24 @@
     }
     & .favorites-list-container {
       background-color: white;
-      width: 290px;
+      width: 300px;
       height: 100px;
       margin: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 5px;
+      & .img-favorites {
+        width: 52px;
+        height: 72px;
+        border: red solid 1px;
+      }
+
+      & .name-favorites {
+        font-family: "Krona One", sans-serif;
+        font-size: 14px;
+        margin-right: 10px;
+      }
 
       & .remove-favorite {
         width: 20px;
@@ -29,14 +44,10 @@
         background-color: black;
         color: white;
         text-align: center;
-        position: relative;
-        left: 260px;
-        top: 40px;
       }
     }
   }
   & .section2 {
-    background-color: red;
     flex-grow: 2;
     &-list {
       display: grid;
@@ -49,13 +60,20 @@
 }
 
 .series-box {
-  background-color: lightblue;
-  margin: 5px;
-  color: darkblue;
+  width: 240px;
+  height: 380px;
+  margin: 10px;
+  padding: 15px;
+  background-color: black;
+
+  & .series-name {
+    color: white;
+    font-family: "Krona One", sans-serif;
+    font-size: 18px;
+    margin-top: 8px;
+  }
 }
 
 .favorite .series-box {
-  background-color: darkblue;
-  margin: 5px;
-  color: white;
+  background-color: rgb(139, 13, 13);
 }
