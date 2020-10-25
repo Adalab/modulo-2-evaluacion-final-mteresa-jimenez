@@ -25,7 +25,7 @@ function getData(ev) {
 function paintSearchEngine() {
   let html = "";
   html += '<section class="section1">';
-  html += '<h2 class="favorites-title">Mi lista de favoritos</h2>';
+  html += '<h2 class="favorites-title"> &#9733; Mi lista de favoritos</h2>';
   html += "<ul>";
   for (const favorite of favorites) {
     html += "<li >";
