@@ -4,23 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Buscador de series</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;500&family=Krona+One&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
 
   <body>
     <div class="page">
-      <h1>Buscador de series</h1>
+      <h1 class="main-title">Buscador de series</h1>
 
-      <form>
+      <form class="form">
         <label for="search"></label>
         <input
           type="text"
           id="search"
           placeholder="Nombre de la serie"
-          class="js-input-search"
+          class="js-input-search input-search"
         />
-        <button class="js-btn">Search</button>
+        <button class="js-btn search-btn">Search</button>
       </form>
 
       <main class="js-container container"></main>
