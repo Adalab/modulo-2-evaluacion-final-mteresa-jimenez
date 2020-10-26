@@ -32,5 +32,8 @@
     color: white;
     font-family: "Kanit", sans-serif;
     border-radius: 3px;
+    &:hover {
+      background-color: rgb(97, 9, 9);
+    }
   }
 }
