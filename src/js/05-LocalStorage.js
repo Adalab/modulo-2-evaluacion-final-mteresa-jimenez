@@ -6,9 +6,14 @@ function setLocalStorageFav() {
 }
 
 function getLocalStorageFav() {
-  const LocalStorageFav = JSON.parse(localStorage.getItem(favorites));
-  favorites = LocalStorageFav;
+  const LocalStorageFav = JSON.parse(localStorage.getItem("favorites"));
+  if (LocalStorageFav == null) {
+    favorites = [];
+  } else {
+    favorites = LocalStorageFav;
+  }
   paintSearchEngine();
   listenFavoriteSeries();
   listenRemoveFavorite();
 }
+getLocalStorageFav();
