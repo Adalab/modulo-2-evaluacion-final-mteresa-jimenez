@@ -17,16 +17,18 @@
 
 function markFavoriteSeries(ev) {
   const clicked = parseInt(ev.currentTarget.id);
-  const indexOfFavorite = favorites.indexOf(clicked); // findIndex
-  // let datosGuardar;
-  // for (let i = 0; i < series.length; i++) {
-  //   if (series[i].serie.id === clicked) {
-  //     datosGuardar = series[i];
-  //   }
-  // }
+  const indexOfFavorite = favorites.findIndex((click) => {
+    return click;
+  }); // findIndex
+  let favSeriesData;
+  for (let i = 0; i < series.length; i++) {
+    if (series[i].show.id === clicked) {
+      favSeriesData = series[i];
+    }
+  }
 
   if (indexOfFavorite === -1) {
-    favorites.push(clicked); // datosGuardar
+    favorites.push(favSeriesData); // datosGuardar
   } else {
     favorites.splice(indexOfFavorite, 1);
   }
