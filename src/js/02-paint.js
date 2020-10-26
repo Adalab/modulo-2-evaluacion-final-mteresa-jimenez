@@ -10,10 +10,18 @@ function paintSearchEngine() {
   for (const favorite of favorites) {
     html += "<li >";
     html += '<div class="favorites-list-container">';
-    html += `<img class="js-img-favorites img-favorites" src="https://via.placeholder.com/210x295/ffffff/666666/?
-    text=TV"/>`;
-    html +=
-      '<h2 class="js-name-favorites name-favorites" maxlength="20">Nombre de la serie</h2>';
+    for (const serie of series) {
+      if (favorite === parseInt(serie.show.id)) {
+        if (serie.show.image === null) {
+          html += `<img class="js-img-favorites img-favorites" src="https://via.placeholder.com/210x295/ffffff/666666/?
+        // text=TV"/>`;
+        } else {
+          html += `<img class="js-img-favorites img-favorites" src="${serie.show.image.medium}
+  "/>`;
+        }
+        html += `<h2 class="js-name-favorites name-favorites" maxlength="20">${serie.show.name}</h2>`;
+      }
+    }
     html += '<button class="remove-favorite js-remove-favorite">x</button>';
     html += "</div>";
     html += "</li>";

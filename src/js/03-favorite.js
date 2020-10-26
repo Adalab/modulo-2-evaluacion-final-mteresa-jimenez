@@ -1,18 +1,5 @@
 "use strict";
 
-// function paintFavoriteList() {
-//   const previewFavoriteName = document.querySelector(".js-name-favorites");
-
-//   for (const serie of series) {
-//     const favoriteIndex = favorites.indexOf(serie.show.id);
-//     const serieName = serie.show.name;
-//     if (favoriteIndex === -1) {
-//       previewFavoriteName.innerHTML = serieName;
-//       console.log("serie fav");
-//     }
-//   }
-// }
-
 // handle favorite function
 
 function markFavoriteSeries(ev) {
@@ -27,6 +14,7 @@ function markFavoriteSeries(ev) {
   paintSearchEngine();
   listenFavoriteSeries();
   setLocalStorageFav();
+  console.log(favorites);
 }
 
 //handle remove favorite function
