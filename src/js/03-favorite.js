@@ -33,9 +33,9 @@ function listenFavoriteSeries() {
 }
 
 // listen remove favorite btn
-function listenRemoveFavorite() {
-  const btnRemoveFavs = document.querySelectorAll(".js-remove-favorite");
-  for (const btnRemoveFav of btnRemoveFavs) {
-    btnRemoveFav.addEventListener("click", removeFavorite);
-  }
-}
+// function listenRemoveFavorite() {
+//   const btnRemoveFavs = document.querySelectorAll(".js-remove-favorite");
+//   for (const btnRemoveFav of btnRemoveFavs) {
+//     btnRemoveFav.addEventListener("click", removeFavorite);
+//   }
+// }

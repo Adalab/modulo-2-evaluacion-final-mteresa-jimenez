@@ -12,6 +12,5 @@ function getLocalStorageFav() {
   }
   paintSearchEngine();
   listenFavoriteSeries();
-  listenRemoveFavorite();
 }
 getLocalStorageFav();
