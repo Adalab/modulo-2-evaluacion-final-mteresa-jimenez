@@ -14,7 +14,6 @@ function markFavoriteSeries(ev) {
   paintSearchEngine();
   listenFavoriteSeries();
   setLocalStorageFav();
-  console.log(favorites);
 }
 
 //handle remove favorite function
