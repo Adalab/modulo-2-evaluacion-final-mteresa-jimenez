@@ -20,12 +20,13 @@ function markFavoriteSeries(ev) {
   const indexOfFavorite = favorites.findIndex((click) => {
     return click;
   }); // findIndex
-  let favSeriesData;
+  let favSeriesData = ev.currentTarget;
   for (let i = 0; i < series.length; i++) {
     if (series[i].show.id === clicked) {
       favSeriesData = series[i];
     }
   }
+  console.log("favSeriesData", favSeriesData);
 
   if (indexOfFavorite === -1) {
     favorites.push(favSeriesData); // datosGuardar
@@ -35,7 +36,7 @@ function markFavoriteSeries(ev) {
   paintSearchEngine();
   listenFavoriteSeries();
   setLocalStorageFav();
-  console.log(favorites);
+  console.log("favorites", favorites);
 }
 
 //handle remove favorite function
